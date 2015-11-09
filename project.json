@@ -3,15 +3,13 @@
     "version": "1.0.0-*",
 
     "dependencies": {
-        "Microsoft.AspNet.Server.IIS": "1.0.0-beta7",
-        "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta7",
-        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta7",
-        "Microsoft.AspNet.Diagnostics": "1.0.0-beta7"
+        "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta8",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta8",
+        "Microsoft.AspNet.Diagnostics": "1.0.0-beta8"
     },
 
     "commands": {
-        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000",
-        "kestrel": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --server.urls http://localhost:5001"
+        "web": "Microsoft.AspNet.Server.Kestrel --server.urls http://*:5000"
     },
 
     "frameworks": {
@@ -20,15 +18,15 @@
     },
 
     "exclude": [
-    "wwwroot",
-    "node_modules",
-    "bower_components"
-  ],
+        "wwwroot",
+        "node_modules",
+        "bower_components"
+    ],
     "publishExclude": [
-    "node_modules",
-    "bower_components",
-    "**.xproj",
-    "**.user",
-    "**.vspscc"
-  ]
+        "node_modules",
+        "bower_components",
+        "**.xproj",
+        "**.user",
+        "**.vspscc"
+    ]
 }
