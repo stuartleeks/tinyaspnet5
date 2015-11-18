@@ -1,6 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
-using Microsoft.Framework.DependencyInjection;
+using Microsoft.AspNet.Http;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace EmptyWeb
 {
@@ -20,6 +25,7 @@ namespace EmptyWeb
         // Configure is called after ConfigureServices is called.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseIISPlatformHandler();    
             app.UseWelcomePage();
         }
     }
