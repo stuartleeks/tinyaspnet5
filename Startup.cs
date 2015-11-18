@@ -25,7 +25,6 @@ namespace EmptyWeb
         // Configure is called after ConfigureServices is called.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseIISPlatformHandler();    
             app.UseWelcomePage();
         }
     }
