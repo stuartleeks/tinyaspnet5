@@ -1,8 +1,7 @@
 {
-    "webroot": ".",
     "version": "1.0.0-*",
-    
     "compilationOptions": {
+        "preserveCompilationContext": true,
         "emitEntryPoint": true,
         "debugType": "portable"
     },
@@ -21,17 +20,5 @@
             ]
         }
     },
-
-    "exclude": [
-        "wwwroot",
-        "node_modules",
-        "bower_components"
-    ],
-    "publishExclude": [
-        "node_modules",
-        "bower_components",
-        "**.xproj",
-        "**.user",
-        "**.vspscc"
-    ]
+    "content": "wwwroot"
 }
