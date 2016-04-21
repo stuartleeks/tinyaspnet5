@@ -1,19 +1,25 @@
 {
     "webroot": ".",
     "version": "1.0.0-*",
-
-    "dependencies": {
-        "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
-        "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final"
+    
+    "compilationOptions": {
+        "emitEntryPoint": true,
+        "debugType": "portable"
     },
-
-    "commands": {
-        "web": "Microsoft.AspNet.Server.Kestrel --server.urls http://*:5000"
+    "dependencies" : {
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
+        "Microsoft.AspNetCore.Diagnostics": "1.0.0-*",
+        "Microsoft.NETCore.App": {
+            "type": "platform",
+            "version": "1.0.0-rc2-23931"
+        }
     },
-
     "frameworks": {
-        "dnx451": {},
-        "dnxcore50": {}
+        "netcoreapp1.0": {
+        "imports": [
+            "portable-net45+wp80+win8+wpa81+dnxcore50"
+            ]
+        }
     },
 
     "exclude": [
